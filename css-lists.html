@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS Lists - Danh sách trong CSS</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f9f9f9;
+                padding: 20px;
+                color: #333;
+            }
+            h1 {
+                text-align: center;
+                color: #2196F3;
+            }
+            h2 {
+                color: #673AB7;
+                margin-top: 30px;
+                border-bottom: 2px solid #673AB7;
+                padding-bottom: 5px;
+            }
+            .demo-box {
+                background-color: #fff;
+                padding: 15px 25px;
+                margin: 10px 0 20px;
+                border-radius: 6px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            }
+            /* 1. list-style-type cho ul */
+            .ul-disc    { list-style-type: disc; }
+            .ul-circle  { list-style-type: circle; }
+            .ul-square  { list-style-type: square; }
+            .ul-none    { list-style-type: none; }
+
+            /* 2. list-style-type cho ol */
+            .ol-decimal    { list-style-type: decimal; }
+            .ol-lower-alpha{ list-style-type: lower-alpha; }
+            .ol-upper-alpha{ list-style-type: upper-alpha; }
+            .ol-lower-roman{ list-style-type: lower-roman; }
+            .ol-upper-roman{ list-style-type: upper-roman; }
+
+            /* 3. list-style-image */
+            .ul-image {
+                list-style-image: url('https://via.placeholder.com/15/2196F3/ffffff?text=★');
+            }
+
+            /* 4. list-style-position */
+            .ul-outside { list-style-position: outside; }
+            .ul-inside  { list-style-position: inside; }
+
+            /* 5. list-style (rút gọn) */
+            .ul-shorthand {
+                list-style: square inside;
+            }
+
+            /* 6. Danh sách với màu sắc */
+            .ul-color {
+                color: #e91e63;
+                font-weight: bold;
+            }
+            .ul-color li:nth-child(odd) {
+                color: #2196F3;
+            }
+            .ol-color {
+                color: #4CAF50;
+            }
+            .ol-color li {
+                color: #333;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS Lists - Danh sách trong CSS</h1>
+
+        <!-- 1. list-style-type cho UL -->
+        <h2>1. list-style-type cho danh sách không thứ tự (&lt;ul&gt;)</h2>
+        <div class="demo-box">
+            <p><b>disc</b> (mặc định):</p>
+            <ul class="ul-disc">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+
+            <p><b>circle</b>:</p>
+            <ul class="ul-circle">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+
+            <p><b>square</b>:</p>
+            <ul class="ul-square">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+
+            <p><b>none</b> (không có dấu):</p>
+            <ul class="ul-none">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+
+        <!-- 2. list-style-type cho OL -->
+        <h2>2. list-style-type cho danh sách có thứ tự (&lt;ol&gt;)</h2>
+        <div class="demo-box">
+            <p><b>decimal</b> (mặc định):</p>
+            <ol class="ol-decimal">
+                <li>Bước 1</li>
+                <li>Bước 2</li>
+                <li>Bước 3</li>
+            </ol>
+
+            <p><b>lower-alpha</b>:</p>
+            <ol class="ol-lower-alpha">
+                <li>Bước 1</li>
+                <li>Bước 2</li>
+                <li>Bước 3</li>
+            </ol>
+
+            <p><b>upper-alpha</b>:</p>
+            <ol class="ol-upper-alpha">
+                <li>Bước 1</li>
+                <li>Bước 2</li>
+                <li>Bước 3</li>
+            </ol>
+
+            <p><b>lower-roman</b>:</p>
+            <ol class="ol-lower-roman">
+                <li>Bước 1</li>
+                <li>Bước 2</li>
+                <li>Bước 3</li>
+            </ol>
+
+            <p><b>upper-roman</b>:</p>
+            <ol class="ol-upper-roman">
+                <li>Bước 1</li>
+                <li>Bước 2</li>
+                <li>Bước 3</li>
+            </ol>
+        </div>
+
+        <!-- 3. list-style-image -->
+        <h2>3. list-style-image (đánh dấu bằng hình ảnh)</h2>
+        <div class="demo-box">
+            <ul class="ul-image">
+                <li>Mục được đánh dấu bằng ngôi sao</li>
+                <li>Mục thứ hai</li>
+                <li>Mục thứ ba</li>
+            </ul>
+        </div>
+
+        <!-- 4. list-style-position -->
+        <h2>4. list-style-position (vị trí dấu đầu dòng)</h2>
+        <div class="demo-box">
+            <p><b>outside</b> (mặc định - dấu nằm ngoài):</p>
+            <ul class="ul-outside">
+                <li>Đây là một đoạn văn bản dài để minh họa vị trí của dấu đầu dòng khi danh sách có nhiều dòng văn bản. Dấu đầu dòng nằm bên ngoài khối văn bản.</li>
+                <li>Mục thứ hai</li>
+            </ul>
+
+            <p><b>inside</b> (dấu nằm trong dòng văn bản):</p>
+            <ul class="ul-inside">
+                <li>Đây là một đoạn văn bản dài để minh họa vị trí của dấu đầu dòng khi danh sách có nhiều dòng văn bản. Dấu đầu dòng nằm bên trong khối văn bản.</li>
+                <li>Mục thứ hai</li>
+            </ul>
+        </div>
+
+        <!-- 5. list-style rút gọn -->
+        <h2>5. list-style (thuộc tính rút gọn)</h2>
+        <div class="demo-box">
+            <p><b>list-style: square inside;</b></p>
+            <ul class="ul-shorthand">
+                <li>Mục 1 - vừa square vừa inside</li>
+                <li>Mục 2 - vừa square vừa inside</li>
+                <li>Mục 3 - vừa square vừa inside</li>
+            </ul>
+        </div>
+
+        <!-- 6. Danh sách với màu sắc -->
+        <h2>6. Danh sách với màu sắc</h2>
+        <div class="demo-box">
+            <p><b>UL với màu sắc xen kẽ:</b></p>
+            <ul class="ul-color">
+                <li>Mục màu xanh dương (lẻ)</li>
+                <li>Mục màu hồng (chẵn)</li>
+                <li>Mục màu xanh dương (lẻ)</li>
+                <li>Mục màu hồng (chẵn)</li>
+            </ul>
+
+            <p><b>OL với màu sắc cho dấu số và nội dung:</b></p>
+            <ol class="ol-color">
+                <li>Bước 1 - dấu số màu xanh lá</li>
+                <li>Bước 2 - dấu số màu xanh lá</li>
+                <li>Bước 3 - dấu số màu xanh lá</li>
+            </ol>
+        </div>
+    </body>
+</html>
